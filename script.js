@@ -33,7 +33,6 @@ let FPS = 15; // frames per second
 // let the laying of twigs begin
 window.onload = function() {
 	setup();
-	window.drawLoop = setInterval(draw, 1000/FPS);
 };
 
 
@@ -109,6 +108,7 @@ function grassyBackground() {
 	img.onload = function() { 
 		context.fillStyle = context.createPattern(img, 'repeat');
 		context.fillRect(0, 0, width, height);
+        window.drawLoop = setInterval(draw, 1000/FPS);
 	};
 }
 
